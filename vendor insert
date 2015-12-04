@@ -1,0 +1,39 @@
+db.vendor.insert(            { "vname":"raj" ,
+                                "products":
+											[
+												{"pname":"SOP01",
+													"plicense": [ 	{"licenseno":"1","lstartdate": new Date("2012-12-19")  , "lenddate": new Date("2020-12-19") ,"lstatus":"To be initiated", "lcomments":"L1"
+																	},  
+																	{"licenseno":"2","lstartdate": new Date("2013-12-19")  , "lenddate": new Date("2021-12-19") ,"lstatus":"Triggered with Vendor", "lcomments":"L2"
+																	},
+																]
+																								
+												} ,
+												{"pname":"SOP02",
+													"plicense": [ 	{"licenseno":"1","lstartdate": new Date("2015-12-19")  , "lenddate": new Date("2020-12-19") ,"lstatus":"PO initiated with Purchase", "lcomments":"L1"
+																	},  
+																	{"licenseno":"2","lstartdate": new Date("2018-12-19")  , "lenddate": new Date("2021-12-19") ,"lstatus":"Renewed", "lcomments":"L2"
+																	},
+																]
+																								
+												} 
+											], 
+                                }
+				);
+
+				
+
+db.vendor.insert(            { "vname":vendorname ,
+                                "products":
+											[
+												{"pname":pname,
+													"plicense": [ 	{"licenseno":licenseno,"lstartdate": new Date(start_date)  , "lenddate": new Date(end_date) ,"lstatus":status, "lcomments":comments
+																	},  
+																	
+																]
+																								
+												} ,
+												
+											], 
+                                }
+				);
