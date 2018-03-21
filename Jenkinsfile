@@ -7,17 +7,8 @@ pipeline {
   }
   stages {
     stage('build') {
-      parallel {
-        stage('build') {
-          steps {
-            echo 'Build Success'
-          }
-        }
-        stage('git clone') {
-          steps {
-            git 'git@github.com:rkgade/vendor_mgmt_project.git'
-          }
-        }
+      steps {
+        echo 'Build Success'
       }
     }
     stage('test') {
