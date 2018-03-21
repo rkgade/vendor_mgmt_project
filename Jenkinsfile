@@ -15,7 +15,7 @@ pipeline {
         }
         stage('git clone') {
           steps {
-            git(url: 'git@github.com:rkgade/vendor_mgmt_project.git', branch: 'master', changelog: true)
+            git 'git@github.com:rkgade/vendor_mgmt_project.git'
           }
         }
       }
