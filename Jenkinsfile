@@ -7,8 +7,17 @@ pipeline {
   }
   stages {
     stage('build') {
-      steps {
-        echo 'Build Success'
+      parallel {
+        stage('build') {
+          steps {
+            echo 'Build Success'
+          }
+        }
+        stage('') {
+          steps {
+            git(url: 'https://github.com/rkgade/vendor_mgmt_project.git', branch: 'master', changelog: true)
+          }
+        }
       }
     }
     stage('test') {
